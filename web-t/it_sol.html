@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="template.css">
+        <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ewert&family=Mitr&family=Single+Day&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+        <div class="pos-f-t">
+            <div class="collapse" id="navbarToggleExternalContent">
+              <div class="bg-light p-4">
+                <h5 class="text-white h4">Collapsed content</h5>
+                <span class="text-muted">Toggleable via the navbar brand.</span>
+              </div>
+            </div>
+         
+            <!--newnav-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+              <img src="creden_logos.png" alt="Italian Trulli" width="200" height="40" padding=10px>
+              
+              
+            
+              <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+                <ul class="navbar-nav mr-auto">
+                 
+                  <li class="nav-item dropdown" style="  margin-left: 100px;">
+                    <button type="button" class="btn btn-danger dropdown-toggle" style="background-color:#1b66b0 ;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      ขึ้นต้นด้วย
+                    </button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">นาง</a>
+                  </li>
+              
+                      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="background-color: rgb(75, 141, 248); color:whitesmoke">Search</button>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
+                  </svg>
+                  <div style="margin-left: 10px; color:#1b66b0">
+                    <select name="language" id="Language" style="border-radius: 5px;">
+                        <option value="Thai">ภาษาไทย</option>
+                        <option value="English">English</option>
+                      </optgroup>
+                    </select>
+                  </div>
+                  <div style=" margin-left: 10px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                      <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                    </svg>
+                  </div>
+                </form>
+              </div>
+            </nav>
+        </div >
+        <div class="row">
+          <div style="background-color:#1b66b0;color:white;padding:20px; width:100%;overflow: hidden; position:sticky; " >
+            <div class="head-text">
+              <h2 style="font-size: 35px; padding:15px;">บริษัท เท็คไอทีโซลูชั่น จำกัด <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+              </svg> </h2> 
+              <p style="padding:15px;">TAKE IT SOLUTION CO.,LTD.
+                
+              </p>
+            </div>
+          </div> 
+
+            <div style="background-color:#212222 ;color:white;padding: 2px; width:100% " >
+              <div class="container" style="padding: 0px; margin: 1px">
+                <nav class="navbar navbar-expand-lg " style="margin: 5px;">
+                  <a  href="#"  class="nav-items" >ข้อมูลทั่วไป</a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="navbar-nav" style="padding: 1px;">
+                      <div class="dropdown">
+                        <button class="dropbtn">กรรมการและการถือหุ้น</button>
+                        <div class="dropdown-content">
+                          <a href="#">กรรมการ</a>
+                          <a href="#">การถือหุ้น</a>
+                        </div>
+                      </div>
+                      <div class="dropdown">
+                        <button class="dropbtn">ข้อมูลการเงิน</button>
+                        <div class="dropdown-content">
+                          <a href="#">งบกำไรขาดทุน</a>
+                          <a href="#">งบดุล</a>
+                          <a href="#">อัตราส่วนทางการเงิน</a>
+                          <a href="#">เครดิตทางการค้า</a>
+                          <a href="#">สภาพคล่องเงินสด</a>
+                          <a href="#">ประวัติการส่งงบและผู้สอบบัญชี</a>
+                          <a href="#">การจัดซื้อจัดจ้างภาครัฐ</a>
+                          <a href="#">จดภาษีมูลค่าเพิ่ม (สาขา)</a>
+
+                        </div>
+                      </div>
+                    </div>
+                      <a href="#" class="nav-items">ประวัติการเปลี่ยนแปลง</a>
+                      <a href="#" class="nav-items">ข่าว</a>
+                      <a href="#" class="nav-items">จัดอันดับ</a>
+            
+                    </div>
+                  </div>
+                </nav>
+              
+              </div>
+            </div> 
+        </div>
+          
+          
+    </header>
+
+
+    
+
+
+    <body>
+
+ <div class="container-fluid bg-content">
+<!--row1-->
+    
+    <div class="row_box_graph" style="margin: 30px;">
+      <!--graph1-->
+      <div class="flex-container">
+        <div class="col-12 col-md-12 col-lg-4 box_graph_1">
+          <div class="box_total">
+            <div class="box_bgtable">
+              <div id="app">
+                <div class="col-12 total_income_right">
+                  <div class="text-detail">
+                    <div style="background-color: #1b66b0; height:60px;border-radius: 10px 10px 0px 0px; ">
+                      <h3 style="text-align: center; color:white; padding:10px"> รายได้รวม ปี 2565 (บาท)</h3>
+                    </div>
+                      <h4 style="padding:10px;">71,424,840 </h4>
+                    <div style="text-align: center; height:40px; background-color:#f1f1f1; border-radius: 0px 0px 10px 0px;">
+                      <h5 style="color: red;padding:10px;" >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                        </svg>
+                        YoY -16.02 %
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="app">
+                <div id="wrapper">
+                  <div id="chart-area">
+                    <div class="title_chart" style="font-size: 20px;">รายได้รวม 5 ปีล่าสุด (บาท)</div>
+                    <div class="chart-container" style="display:block; height: 30%; width:80%;margin:auto">
+                      <canvas id="myChart" style="width:40%;max-width:100%;height:30%;" ></canvas>
+                    </div>
+                    <a style="padding-right: 0; font-size:13px;" href="#">คลิกเพื่อดูงบการเงินนฉบับเต็ม</a>
+                  </div>            
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!--g2-->
+        <div class="col-12 col-md-12 col-lg-4 box_graph_2" >
+          <div class="box_total">
+            <div class="box_bgtable">
+              <div id="app">
+                <div class="col-12 total_income_right">
+                  <div class="text-detail">
+                    <div style="background-color: #1b66b0; height:60px;border-radius: 10px 10px 0px 0px; ">
+                      <h3 style="text-align: center; color:white; padding:10px">กำไร (ขาดทุน) ปี 2565 (บาท)
+                      </h3>
+                    </div>
+                    <h4 style="padding:10px;">1,802,689
+                    </h4>
+                    <div style="text-align: center; height:40px; background-color:#f1f1f1; border-radius: 0px 0px 10px 0px;">
+                      <h5 style="color: red;padding:10px;" >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                        </svg>
+                        YoY -16.02 %
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="app">
+                <div id="wrapper">
+                  <div id="chart-area">
+                    <div class="title_chart" style="font-size: 20px;">กำไร (ขาดทุน) ปี 2565 (บาท)</div>
+                    <div class="chart-container" style="display:block; height: 45%; width:80%;margin:auto">
+                      <canvas id="myChart1" style="width:40%;max-width:100%;height:30%;" ></canvas>
+                    </div>
+                   
+                  </div>            
+                </div>
+                <div style=" display: flex; padding-top: 20px;"> 
+                  <p style="padding-left:0; padding-right:5 px;font-size:17px; color:#1b66b0;">2.52 % </p>
+                  <span class="hovertext" data-hover="อัตราส่วนกำไรขาดทุนต่อรายได้รวม">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-square-fill" viewBox="0 0 16 16">
+                      <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.93 4.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                     </svg>
+                    </span>
+                  <a style="padding-left: 100px; font-size:13px;" href="#">คลิกเพื่อดูงบการเงินนฉบับเต็ม</a>
+                </div>
+              </div>
+               
+            </div>
+
+          </div>
+        </div>
+      <!--g3-->
+      <div class="col-12 col-md-12 col-lg-4 box_graph_3" >
+        <div class="box_total">
+          <div class="box_bgtable">
+            <div id="app">
+              <div class="col-12 total_income_right">
+                <div class="text-detail">
+                  <div style="background-color: #1b66b0; height:60px;border-radius: 10px 10px 0px 0px; ">
+                    <h3 style="text-align: center; color:white; padding:10px"> รายได้รวม ปี 2565 (บาท)</h3>
+                  </div>
+                  <h4 style="padding:10px;">47,457,154
+                  </h4>
+                  <div style="text-align: center; height:40px; background-color:#f1f1f1; border-radius: 0px 0px 10px 0px;">
+                    <h5 style="color: #1b66b0 ;padding:10px;" >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                      </svg>
+                      YoY 56.91 %
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="app">
+              <div id="wrapper">
+                <div id="chart-area">
+                  <div class="title_chart" style="font-size: 20px;">รายได้รวม 5 ปีล่าสุด (บาท)</div>
+                  <div class="chart-container" style="display:block; height: 45%; width:80%;margin:auto">
+                    <canvas id="myChart2" style="width:40%;max-width:100%;height:30%;" ></canvas>
+                  </div>
+                  <a style="padding-right: 0; font-size:13px;" href="#">คลิกเพื่อดูงบการเงินนฉบับเต็ม</a>
+                </div>            
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+    </div>
+
+
+
+    
+<!--row-->
+    <div class = "row"> <!--all section up-->
+      
+        <div class="col-12 col-md-12 col-lg-6"> 
+          
+          <div class="box_bgtable">
+            <h3>ข้อมูลทั่วไปของ บริษัท เท็คไอทีโซลูชั่น จำกัด</h3>
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col" style="width: 50%;" >ชื่อนิติบุคคล</th>
+          
+                    <th scope="col" style="width: 50%;" >TAKE IT SOLUTION CO.,LTD.</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <th scope="row" >เลขทะเบียนนิติบุคคล</th>
+                    <td>0105551051021</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" >วันเดือนปีที่จดทะเบียน	</th>
+                    <td>วันที่ 13 พ.ค. 2551 (15 ปี 1 เดือน 25 วัน)
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" >สถานภาพกิจการ	</th>
+                    <td>ยังดำเนินกิจการอยู่</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" >ประเภทธุรกิจ	</th>
+                    <td>บริษัทจำกัด
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" >ปีที่ส่งงบการเงิน	</th>
+                    <td><a href="#">2561,2562,2563,2564,2565</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row" >รอบปิดบัญชีปีล่าสุด	</th>
+                    <td><a href="#">	31 ธันวาคม (วันที่ส่งงบ 29 พ.ค. 2566)</a><a href="#" style="color: green;">-(ส่งงบก่อน 2 วัน)</a>
+                      <span class="hovertext" data-hover="ส่งงบวันสุดท้านวันที่ 31 พ.ค.		 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-square-fill" viewBox="0 0 16 16">
+                          <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.93 4.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                         </svg>
+                        </span>
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" >ผู้สอบบัญชีปีล่าสุด	</th>
+                    <td><a href="#">	xxxxxxx xxxxxxx - (ตรวจ 774 บริษัท)</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row" >จัดซื้อจัดจ้างภาครัฐ	</th>
+                    <td><a href="#">	x,xxx โครงการ มูลค่า xx,xxx,xxx บาท</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row" >จดทะเบียนภาษีมูลค่าเพิ่ม	</th>
+                    <td><a href="#">xx สาขา</a></td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+      
+        </div>
+    
+
+      <div class="col-12 col-md-12 col-lg-6"> 
+        <div class="box_bgtable">
+          <h3>ข้อมูลธุรกิจของ บริษัท เท็คไอทีโซลูชั่น จำกัด</h3>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col" style="width: 40%;" >ทุนจดทะเบียนปัจจุบัน (บาท)	</th>
+               
+                  <th scope="col" style="width: 60%;" >5,000,000 </th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <th scope="row" >มูลค่าบริษัท	</th>
+                  <td>23,824,994 บาท (476.5% ของทุน)
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" >จำนวนหุ้น (ราคาต่อหุ้น)	</th>
+                  <td>50,000 หุ้น (ราคา 476 บาท/หุ้น)
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" >ขนาดธุรกิจ
+                    <span class="hovertext" data-hover="หมวดธุรกิจ B,D,C  คือ กลุ่มการผลิต นับจากรายได้รวมของปีล่าสุด
+                    น้อยกว่าเท่ากับ 1,800,000 = Micro 
+                    น้อยกว่าเท่ากับ 100,000,000 = Small 
+                    น้อยกว่าเท่ากับ 500,000,000 = Medium 
+                    มากกว่า 500,000,000 = Large
+                    หมวดที่ไม่ใช่ B,D,C  คือ กลุ่มการบริการ นับจากรายได้รวมของปีล่าสุด
+                    น้อยกว่าเท่ากับ 1,800,000 = Micro
+                    น้อยกว่าเท่ากับ 50,000,000 = Small
+                    น้อยกว่าเท่ากับ 300,000,000 = Medium
+                    มากกว่า 300,000,000 = Large
+                    ">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-square-fill" viewBox="0 0 16 16">
+                        <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.93 4.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                      </svg>
+                    </span>
+                     </th>
+                  <td>Medium</td>
+                </tr>
+                <tr>
+                  <th scope="row" >หมวดธุรกิจ (A-U)	</th>
+                  <td><a href="#">	J : ข้อมูลข่าวสารและการสื่อสาร</a></td>
+                </tr>
+                <tr>
+                  <th scope="row" >กลุ่มธุรกิจ (TSIC)	</th>
+                  <td>62023 : กิจกรรมการจัดการสิ่งอำนวยความสะดวกด้านคอมพิวเตอร์
+                    <span><br> <a href="#">อันดับธุรกิจในกลุ่มนี้</a></span>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" >วัตถุประสงค์</th>
+                  <td>	ให้บริการปรึกษา ติดตั้ง ฝึกอบรมระบบคอมพิวเตอร์</td>
+                </tr>
+                <tr>
+                  <th scope="row" >บริษัทในกลุ่มธุรกิจเดียวกัน</th> 
+                  <td> <a href="#">อีบิส โมบาย จำกัด</a><br>
+                    <a href="#">โอเพ่น เทคโนโลยี่ จำกัด (มหาชน)</a><br>
+                    <a href="#">พีค พลัส วัน จำกัด</a><br>
+                    <a href="#">ไดมอนด์ เน็ตเวิร์ค โซลูชั่น จำกัด</a>
+
+                  </td>
+                </tr>
+              
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+<!--row2-->
+    <div class="row">
+      <div class="col-12 col-md-12 col-lg-6 credit_term_and_ccc pc">
+        <div class="box_credit_term pc mb-3">
+          <h3>เครดิตทางการค้า บริษัท เท็คไอทีโซลูชั่น จำกัด </h3>
+          <div class="row pt-3">
+            <div class="col-12 col-md-6 col-lg-6 col_credit_term">
+              <!--<div textr center-->
+              <div class="card">
+                <div style="background-color: #26A0FC; height:80px " >
+                  
+                  <p style="text-align: center; padding:10%" >เครดิตเทอมที่เหมาะสม (วัน)
+                  </p>
+
+                </div>
+                <div class="card-body">
+                  <p style="text-align: center;">xx</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6 col_credit_term">
+              <!--<div textr center-->
+              <div class="card">
+                <div style="background-color: #dad6d6; height: 80px; ">
+                  
+                  <p style="text-align: center; padding:10%;" >วงเงินเครดิตที่เหมาะสม (บาท)
+                  </p>
+
+                </div>
+                <div class="card-body">
+                  <p style="text-align: center;">xx</p>
+                </div>
+              </div>
+            </div>
+           
+
+          </div>
+<!--button-->
+          <div class="row">
+            <div class="col-12 col-md-12 button_readmore_director text-right">
+              <!--button for more-->
+              <br>
+              <button type="button" class="btn btn-outline-primary" style="color: #1b66b0;">คลิกเพื่อดูเพิ่มเติม</button>
+          </div>
+
+          </div>
+        </div>
+        <!--under row-->
+    
+        <div class="row">
+          <div class="col-12">
+            <div class="box_bgtable">
+              <div class="box_youimg pc space_content">
+                <h3>วงจรเงินสดทางการเงิน (TBS CCC Index)</h3>
+                <div class="row justify-content-center pt-5">
+                  <!--picture-->
+                  <div class="row">
+                    <div style="align-items: center; padding-left:40%; padding-top:0">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16" style="padding-top: 0;">
+                        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                      </svg>
+                    </div>
+                    <div id="grad1"></div>
+                  </div>
+                </div>
+                <div id="number_detail" class="d-flex justify-content-between">
+                  <span class="font-weight-bold">180</span>
+                  <span class="font-weight-bold">0</span>
+                  <span class="font-weight-bold">-180</span>
+                </div>
+
+                <div class="row justify-content-center"><!--detail-->
+                  <div class="col-12 pt-3">
+                    <div class="detail_ccc_progressbar">
+                      <span class="text-blue">
+                        บริษัท เท็คไอทีโซลูชั่น จำกัด
+                      </span>
+                      มีวงจรเงินสด เท่ากับ 
+                      <span class="text-blue">
+                        19
+                      </span>
+                      วัน <br> หมายความว่า
+                      <span class="text-blue">
+                        บริษัท เท็คไอทีโซลูชั่น จำกัด
+                      </span>
+                      ได้รับเงินจากลูกค้า 
+                      <span class="text-blue">
+                        "ก่อน"
+                      </span>
+                      วันกำหนดชำระหนี้
+                      <span class="text-blue">
+                        19
+                      </span>
+                      วัน  ถือว่า 
+                      <span class="text-blue">
+                        "ดีกว่า"
+                      </span>
+                      ค่าเฉลี่ยทั้งประเทศที่ 26.1 วัน
+
+
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-12 col-md-12 button_readmore_director text-right">
+                  <!--button for more-->
+                  <br>
+                  <button type="button" class="btn btn-outline-primary" style="color: #1b66b0;">คลิกเพื่อดูเพิ่มเติม</button>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    </div>
+   <!--row2.2--> 
+    <div class="col-12 col-md-12 col-lg-6 space_content">
+      <div class="box_bgtable">
+        <div class="box_business_ranking pc">
+          <div class="row"><!--header-->
+            <div class="col-10 col-xl-10 col-md-8">
+              <h3>อันดับธุรกิจ บริษัท เท็คไอทีโซลูชั่น จำกัด</h3>
+            </div>
+            <div class="col-2 col-xl-2 col-md-4 text-right" >
+              <div class="btn-group">
+                <button type="button" style ="background-color:#1b66b0"class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                  ปี2564
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">ปี 2564</a>
+                  <a class="dropdown-item" href="#">ปี 2563</a>
+                  <a class="dropdown-item" href="#">ปี 2562</a>
+                  <a class="dropdown-item" href="#">ปี 2561</a>
+                </div>
+              </div>
+            </div>
+              <div class="row">
+                <div class="table-responsive" style="margin: 3%;">
+                  <table class="table table-striped">
+                    <thead>
+                      <tr style="background-color: #1b66b0; color:white">
+                        <th scope="col">ประเภท</th>
+                        <th scope="col">รายได้รวม</th>
+                        <th scope="col">กำไรสุทธิ</th>
+                        <th scope="col">ภาษีเงินได้</th>
+                        <th scope="col">สินทรัพย์รวม</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr >
+                      <th scope="row" style="background-color: #dad6d6;">ประเทศไทย</th>
+                      <th scope="row">
+                        <svg xmlns="http://www.w3.org/2000/svg" color="red" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                        </svg>
+                        39,939</th>
+                      <th scope="row">
+                        <svg xmlns="http://www.w3.org/2000/svg" color="green" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                        </svg>
+                        26,027</th>
+                      <th scope="row">
+                        <svg xmlns="http://www.w3.org/2000/svg" color="green" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                        </svg>
+                        22,928</th>
+                      <th scope="row">
+                        <svg xmlns="http://www.w3.org/2000/svg" color="red" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                        </svg>
+                        87,272</th>
+                    </tr>
+                    <tr>
+                      <th scope="row" style="background-color: #dad6d6;">กรุงเทพมหานครและปริมณฑล</th>
+                      <th scope="row">
+                        <svg xmlns="http://www.w3.org/2000/svg" color="red" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                        </svg>
+                        538</th>
+                      <th scope="row">
+                        <svg xmlns="http://www.w3.org/2000/svg" color="green" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                        </svg>
+                        699</th>
+                      <th scope="row">
+                        <svg xmlns="http://www.w3.org/2000/svg" color="green" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                        </svg>
+                        531</th>
+                      <th scope="row">
+                        <svg xmlns="http://www.w3.org/2000/svg" color="red" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                        </svg>
+                        1,381</th>
+                    </tr>
+                    <tr>
+                      <th scope="row" style="background-color: #dad6d6;">กรุงเทพมหานคร</th>
+                      <th scope="row"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" color="red" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                        </svg>
+                        16,053</th>
+                      <th scope="row">
+                        <svg xmlns="http://www.w3.org/2000/svg" color="green" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                        </svg>
+                        13,142</th>
+                      <th scope="row">
+                        <svg xmlns="http://www.w3.org/2000/svg" color="green" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                        </svg>
+                        11,525</th>
+                      <th scope="row">
+                        <svg xmlns="http://www.w3.org/2000/svg" color="red" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                        </svg>
+                        40,351</th>
+                    </tr>
+                    <tr>
+                      <th scope="row" style="background-color: #dad6d6;">หมวดธุรกิจ : J 
+                      <span class="hovertext" data-hover="J : ข้อมูลข่าวสารและการสื่อสาร	 ">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-square-fill" viewBox="0 0 16 16">
+                        <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.93 4.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                       </svg>
+                      </span>
+                      </th>
+                      <th scope="row">
+                        <svg xmlns="http://www.w3.org/2000/svg" color="red" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                        </svg>
+                         24,618	</th>
+                      <th scope="row">
+                        <svg xmlns="http://www.w3.org/2000/svg" color="green" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                        </svg>
+                        18,661</th>
+                      <th scope="row">
+                        <svg xmlns="http://www.w3.org/2000/svg" color="green" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                        </svg>
+                        16,615</th>
+                      <th scope="row">
+                        <svg xmlns="http://www.w3.org/2000/svg" color="red" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                        </svg>
+                        57,817</th>
+                    </tr>
+                    <tr>
+                      <th scope="row" style="background-color: #dad6d6;">TSIC : 62023  
+                        <span class="hovertext" data-hover="J : 62023 : กิจกรรมการจัดการสิ่งอำนวยความสะดวกด้านคอมพิวเตอร์		 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-square-fill" viewBox="0 0 16 16">
+                          <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.93 4.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                         </svg>
+                        </span>
+                      </th>
+                      <th scope="row">
+                        <svg xmlns="http://www.w3.org/2000/svg" color="green" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                        </svg>
+                        31</th>
+                      <th scope="row">
+                        <svg xmlns="http://www.w3.org/2000/svg" color="green" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                        </svg>
+                        36</th>
+                      <th scope="row">
+                        <svg xmlns="http://www.w3.org/2000/svg" color="green" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                        </svg>
+                        38</th>
+                      <th scope="row">
+                        <svg xmlns="http://www.w3.org/2000/svg" color="red" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                        </svg>
+                        75</th>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col-12 col-md-12 button_readmore_director text-right">
+                  <!--button for more-->
+                  <button type="button" class="btn btn-outline-primary" style="color: #1b66b0;">คลิกเพื่อดูการจัดอันดับทั้งหมด</button>
+              </div>
+              </div>
+            </div>
+
+        </div>
+      </div>
+      </div>
+    </div> 
+<!--row3-->
+    <div class="row">
+      <div class="col-12 col-md-12 col-lg-6 space_content">
+        <div class="box_director pb-director"style="height: 500px" >
+          <div class="box_bgtable" >
+            <h3>กรรมการและผู้มีอำนาจลงนาม  TAKE IT SOLUTION CO.,LTD.</h3>
+            <div class="group-class">
+                <div class="row">
+                  <div class="col-12 col-md-6">
+                    <h4 style="background-color: #1b66b0; color:white; padding:1% ">กรรมการ (1 คน)</h4>
+                    <div class="ul_box_director" style="padding: 2%;">
+                      <p>1. นางสาวตรีนุช จันทมาลา</p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <h4 style="background-color: #1b66b0; color:white; padding:1% ">ผู้มีอำนาจลงนาม</h4>
+                    <div class="ul_box_director" style="padding: 2%;">
+                      <p>กรรมการหนึ่งคนลงลายมือชื่อ
+                        และประทับตราสำคัญของบริษัท</p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-12 button_readmore_director text-right">
+                      <!--button for more-->
+                      <button type="button" class="btn btn-outline-primary" style="color: #1b66b0;">คลิกเพื่อดูกรรมการแบบเต็ม</button>
+                  </div>
+                </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!--3.2-->
+      <div class="col-12 col-md-12 col-lg-6 space_content">
+        <div class="box_bgtable">
+          <div class="shareholding">
+            <h3>สัดส่วนผู้ถือหุ้น TAKE IT SOLUTION CO.,LTD.</h3>
+            <!-- moreabout circle in here-->
+            <div class="chart-container" style="position: relative; height:30vh; width:250px">
+              <canvas id="pieChart" style="width:30%;max-width:250px;" ><script src="./Chart.js"> </script></canvas>
+            </div>
+          </div>
+          
+          <div class="col-12 col-md-12 button_readmore_director text-right">
+            <!--button for more-->
+            <button type="button" class="btn btn-outline-primary" style="color: #1b66b0;">คลิกเพื่อดูผู้ถือหุ้นเพิ่มเติม</button>
+        </div>
+      </div>
+      </div>
+    </div>
+ 
+ <!--row4-->
+  <div class="row">
+    <div class="col-12 col-md-12 col-lg-6">
+      <div class="box_bgtable">
+        <h3>ประวัติการเปลี่ยนแปลง   </h3>
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col" style="width: 30%;" >วันที่</th>
+             
+                <th scope="col" style="width: 40%;" >รายการที่เปลี่ยนแปลง	</th>
+                <th scope="col" style="width: 40%;" >	รายละเอียด</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <th scope="row" >9 ก.ย. 2557</th>
+                <td>	ทุนจดทะเบียน (บาท)</td>
+                <td>	5,000,000</td>
+              </tr>
+              <tr>
+                <th scope="row" >13 พ.ค. 2551</th>
+                <td>	ชื่อนิติบุคคล</td>
+                <td>	เท็คไอทีโซลูชั่น จำกัด</td>
+              </tr>
+              <tr>
+                <th scope="row" >13 พ.ค. 2551</th>
+                <td>	ทุนจดทะเบียน (บาท)</td>
+                <td>1,000,000</td>
+              </tr>
+            
+
+            </tbody>
+          </table>
+        </div>
+        <div class="col-12 col-md-12 button_readmore_director text-right">
+          <!--button for more-->
+          <button type="button" class="btn btn-outline-primary" style="color: #1b66b0;">คลิกเพื่อดูประวัติการเปลี่ยนแปลงทั้งหมด</button>
+      </div>
+    </div>
+  </div>
+<!--4.2-->
+    <div class="col-12 col-md-12 col-lg-6">
+      <div class="box_bgtable">
+        <div class="box_maps pc">
+          <h3>ที่อยู่ บริษัท เท็คไอทีโซลูชั่น จำกัด (ที่อยู่ร่วมกันจำนวน 2 บริษัท)
+          </h3>
+          <p>135/2 อาคารอมรพันธุ์ 205 ทาวเวอร์ 2 ชั้นที่ 1 ซอยนาทอง ถนนรัชดาภิเษก แขวงดินแดง เขตดินแดง กรุงเทพมหานคร
+          </p>
+          <iframe loading="lazy" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDZHFn1Uv4Yf8MkJWv3xOPecVRPP1GsSOE&q=135/2%20%E0%B8%AD%E0%B8%B2%E0%B8%84%E0%B8%B2%E0%B8%A3%E0%B8%AD%E0%B8%A1%E0%B8%A3%E0%B8%9E%E0%B8%B1%E0%B8%99%E0%B8%98%E0%B8%B8%E0%B9%8C%20205%20%E0%B8%97%E0%B8%B2%E0%B8%A7%E0%B9%80%E0%B8%A7%E0%B8%AD%E0%B8%A3%E0%B9%8C%202%20%E0%B8%8A%E0%B8%B1%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88%201%20%E0%B8%8B%E0%B8%AD%E0%B8%A2%E0%B8%99%E0%B8%B2%E0%B8%97%E0%B8%AD%E0%B8%87%20%E0%B8%96%E0%B8%99%E0%B8%99%E0%B8%A3%E0%B8%B1%E0%B8%8A%E0%B8%94%E0%B8%B2%E0%B8%A0%E0%B8%B4%E0%B9%80%E0%B8%A9%E0%B8%81%20%E0%B9%81%E0%B8%82%E0%B8%A7%E0%B8%87%E0%B8%94%E0%B8%B4%E0%B8%99%E0%B9%81%E0%B8%94%E0%B8%87%20%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%94%E0%B8%B4%E0%B8%99%E0%B9%81%E0%B8%94%E0%B8%87%20%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A3"
+          allowfullscreen="allowfullscreen" frameborder="0" width="100%" height="250" style="border:0;padding-top: 10px;padding-bottom: 10px;">
+          #document
+        </iframe>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+</div>
+</div>
+
+<div class="note" style="size: 10px; padding:2%" >
+  <p>*หมายเหตุ</p>
+  <ul>
+    <li>ข้อมูลอัพเดทเมื่อ 5 กรกฎาคม 2566 <button type="button" class="btn btn-outline-primary" style="color: white; background-color:#1b66b0;">คลิกเพื่ออัพเดท</button></li>
+    <li>แหล่งที่มาข้อมูลจากศูนย์กลางข้อมูลภาครัฐ data.go.th และแหล่งข้อมูลอื่นๆ</li>
+    <li>ข้อมูลนี้มีไว้สำหรับใช้วิเคราะห์เชิงธุรกิจเท่านั้น ไม่สามารถนำไปอ้างอิงเป็นหลักฐานทางกฏหมายได้</li>
+  </ul>
+</div>
+
+  <div class="footer">
+    <hr width="100%" size="7" color="gray"><p>
+      <div class="f-detail" style="text-align: center;">
+        <p style="color: #1b66b0;">© สงวนสิทธิ์ 2564 ครีเดน เอเชีย จำกัด Ver. 2.0</p>
+        <a href="#">Privacy</a>
+      </div>
+  </div>
+
+
+
+
+    </body>
+
+</html>
